@@ -8,7 +8,6 @@
 qt_draw_xy::qt_draw_xy(QWidget *parent)
     : QWidget(parent)
 {
-   
     ui.setupUi(this);
     this->setWindowTitle("ÇúÏß»æÍ¼");
     this->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);

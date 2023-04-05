@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{363D8C33-36AE-4796-BD7E-01452AC57FCF}</ProjectGuid>
+    <ProjectGuid>{0EC45BFB-5635-4615-AA30-3148F388C66F}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
@@ -30,12 +30,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>5.9.9_msvc2017_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>5.9.9_msvc2017_64</QtInstall>
-    <QtModules>core;gui;widgets;sql</QtModules>
+    <QtModules>core;network</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -64,7 +64,7 @@
       <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -76,16 +76,44 @@
       <Optimization>MaxSpeed</Optimization>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="qt_calc.qrc" />
-    <QtUic Include="qt_calc.ui" />
-    <QtMoc Include="qt_calc.h" />
-    <ClCompile Include="qt_calc.cpp" />
+    <ClCompile Include="httpconnectionhandler.cpp" />
+    <ClCompile Include="httpconnectionhandlerpool.cpp" />
+    <ClCompile Include="httpcookie.cpp" />
+    <ClCompile Include="httpglobal.cpp" />
+    <ClCompile Include="httplistener.cpp" />
+    <ClCompile Include="httprequest.cpp" />
+    <ClCompile Include="httprequesthandler.cpp" />
+    <ClCompile Include="httpresponse.cpp" />
+    <ClCompile Include="httpServer.cpp" />
+    <ClCompile Include="httpsession.cpp" />
+    <ClCompile Include="httpsessionstore.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="staticfilecontroller.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="staticfilecontroller.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="httpconnectionhandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="httpconnectionhandlerpool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="httpcookie.h" />
+    <ClInclude Include="httpglobal.h" />
+    <ClInclude Include="httprequest.h" />
+    <ClInclude Include="httpresponse.h" />
+    <QtMoc Include="httpServer.h" />
+    <ClInclude Include="httpsession.h" />
+    <QtMoc Include="httpsessionstore.h" />
+    <QtMoc Include="httprequesthandler.h" />
+    <QtMoc Include="httplistener.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
