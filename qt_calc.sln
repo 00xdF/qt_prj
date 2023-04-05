@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_calc", "qt_calc\qt_calc.vcxproj", "{363D8C33-36AE-4796-BD7E-01452AC57FCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Debug|x64.ActiveCfg = Debug|x64
+		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Debug|x64.Build.0 = Debug|x64
+		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Release|x64.ActiveCfg = Release|x64
+		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {564160EA-C673-4C3A-81E1-F2BE35AFE544}
+	EndGlobalSection
+EndGlobal
