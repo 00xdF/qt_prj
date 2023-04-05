@@ -2,6 +2,8 @@
 #include <qpushbutton.h>
 #include <qdebug.h>
 #include <qstack.h>
+#include<qmessagebox.h>
+#include<math.h>
 
 bool isNum(char c);
 
@@ -29,6 +31,14 @@ qt_calc::qt_calc(QWidget *parent)
             connect(button, SIGNAL(clicked()), this, SLOT(clear_Pressed()));
             continue;
         }
+        if (button->text().contains("1/x")) {
+            connect(button, SIGNAL(clicked()), this, SLOT(qiuDao()));
+            continue;
+        }
+        if (button->text().contains("sqrt")) {
+            connect(button, SIGNAL(clicked()), this, SLOT(sqrt()));
+            continue;
+        }
         button->setFont(QFont("黑体", 12));
         //连接点击信号和响应槽
         connect(button, SIGNAL(clicked()), this, SLOT(digistPressed()));
@@ -50,6 +60,23 @@ void qt_calc::digistPressed() {
         expression += button->text();
         ui.lineEdit->setText(expression);
     } 
+}
+
+void qt_calc::qiuDao() {
+    equals_Pressed(); //先计算结果
+    float res = ui.lineEdit->text().toFloat();
+    if (res == 0) {
+        QMessageBox::warning(this, "警告", "当前结果为0");
+        return;
+    }
+    res = 1 / res;
+    ui.lineEdit->setText(QString::number(res));
+
+
+}void qt_calc::sqrtNum() {
+    equals_Pressed(); //先计算结果
+    float res = ui.lineEdit->text().toFloat();
+    ui.lineEdit->setText(QString::number(sqrt(res)));
 }
 
 void qt_calc::equals_Pressed() {

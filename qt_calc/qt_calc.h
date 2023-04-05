@@ -18,6 +18,8 @@ private slots:
     void equals_Pressed();
     void back_Pressed();
     void clear_Pressed();
+    void qiuDao();
+    void sqrtNum();
     
 
 private:

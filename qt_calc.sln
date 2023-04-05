@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_calc", "qt_calc\qt_calc.vcxproj", "{363D8C33-36AE-4796-BD7E-01452AC57FCF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_login_widget", "qt_login_widget\qt_login_widget.vcxproj", "{677139D1-4596-46EB-BAB9-824B7DB0523F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt_draw_xy", "qt_draw_xy\qt_draw_xy.vcxproj", "{ABA4143F-5323-41AD-8677-4238B3F7C727}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +19,14 @@ Global
 		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Debug|x64.Build.0 = Debug|x64
 		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Release|x64.ActiveCfg = Release|x64
 		{363D8C33-36AE-4796-BD7E-01452AC57FCF}.Release|x64.Build.0 = Release|x64
+		{677139D1-4596-46EB-BAB9-824B7DB0523F}.Debug|x64.ActiveCfg = Debug|x64
+		{677139D1-4596-46EB-BAB9-824B7DB0523F}.Debug|x64.Build.0 = Debug|x64
+		{677139D1-4596-46EB-BAB9-824B7DB0523F}.Release|x64.ActiveCfg = Release|x64
+		{677139D1-4596-46EB-BAB9-824B7DB0523F}.Release|x64.Build.0 = Release|x64
+		{ABA4143F-5323-41AD-8677-4238B3F7C727}.Debug|x64.ActiveCfg = Debug|x64
+		{ABA4143F-5323-41AD-8677-4238B3F7C727}.Debug|x64.Build.0 = Debug|x64
+		{ABA4143F-5323-41AD-8677-4238B3F7C727}.Release|x64.ActiveCfg = Release|x64
+		{ABA4143F-5323-41AD-8677-4238B3F7C727}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
