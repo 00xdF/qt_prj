@@ -36,8 +36,8 @@ private:
     SQLiteUtils& operator= (const SQLiteUtils&) = delete; // 禁用赋值运算符
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    QString currentDir = QDir::currentPath();
-    const QString  dbName = currentDir+"/Items.db";
+    // QString currentDir = QDir::currentPath();
+    const QString  dbName = "C:/Users/Administrator/source/repos/qt_calc/qt_listitem/Items.db";
 
 
     //连接到数据库

@@ -11,9 +11,11 @@ class qt_listitem : public QWidget
 public:
     qt_listitem(QWidget *parent = nullptr);
     ~qt_listitem();
-
 private:
     Ui::qt_listitemClass ui;
+
+signals:
+    void sqlChanged(const QString sql);
 
 private slots:
     void timeOutEvent();
@@ -24,5 +26,7 @@ private slots:
     void on_pushButton_init_clicked();
     void on_pushButton_checkSQL_clicked();
     void on_pushButton_filterPrice_clicked();
+    void on_pushButton_stasic_clicked();
+    void on_pushButton_analyse_clicked();
     void initWindows();
 };

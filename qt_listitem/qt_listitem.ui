@@ -189,12 +189,25 @@
      <rect>
       <x>20</x>
       <y>260</y>
-      <width>221</width>
+      <width>111</width>
       <height>34</height>
      </rect>
     </property>
     <property name="text">
      <string>查看SQL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_analyse">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>260</y>
+      <width>112</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>分析</string>
     </property>
    </widget>
   </widget>
@@ -260,6 +273,19 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stasic">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>350</y>
+      <width>71</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>统计</string>
     </property>
    </widget>
   </widget>
